@@ -22,7 +22,7 @@ for backend ::
 
  For adding users: 
 
- docker exec -it splitwise-db psql -U postgres -d splitwise
+ docker exec -it splitwise-db psql -U postgres -d splitwise  
  INSERT INTO users (name) VALUES
 ('Alice'),
 ('Bob'),
@@ -32,6 +32,9 @@ for backend ::
  ### Assumptions ::
 
  users are already present /created.
+
+for docker : DATABASE_URL = "postgresql://postgres:12345@db/splitwise"  
+for running backend without docker: DATABASE_URL="postgresql://postgres:12345@localhost/splitwise"
 
  ### API endpoints
 
